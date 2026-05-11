@@ -1,0 +1,56 @@
+name: "@opencode-ai/memory"
+repo: https://github.com/ezzddinne/opencode-memory
+tagline: Persistent memory system for OpenCode — long-term context retention across sessions
+description: |
+  Retains decisions, conventions, facts, and preferences across OpenCode sessions.
+  Features 5 tools (memory_write, memory_read, memory_search, memory_forget, memory_list),
+  auto-injection of relevant memories into every system prompt, auto-extraction of
+  observations and errors, dual project/global scopes, SQLite FTS5 full-text search
+  with BM25 ranking, and human-readable markdown file storage with YAML frontmatter.
+  Zero external dependencies, no API keys, no databases required.
+scope:
+  - global
+  - project
+tags:
+  - memory
+  - persistent
+  - context
+  - plugin
+min_version: "1.0.0"
+installation: |
+  ## Prerequisites
+
+  - [OpenCode](https://opencode.ai) >= 1.0.0
+
+  ## Install from npm
+
+  ```bash
+  opencode plugin add @opencode-ai/memory
+  ```
+
+  Or add manually to your `opencode.json`:
+
+  ```jsonc
+  {
+    "plugin": ["@opencode-ai/memory"]
+  }
+  ```
+
+  ## Install from GitHub
+
+  ```bash
+  opencode plugin add https://github.com/ezzddinne/opencode-memory
+  ```
+
+  ## Configuration (optional)
+
+  ```jsonc
+  {
+    "plugin": [["@opencode-ai/memory", {
+      "auto_extract": true,
+      "max_injected_memories": 5,
+      "default_scope": "project",
+      "extract_interval_turns": 5
+    }]]
+  }
+  ```

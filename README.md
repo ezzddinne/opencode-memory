@@ -1,5 +1,10 @@
 # @opencode-ai/memory
 
+[![CI](https://github.com/ezzddinne/opencode-memory/actions/workflows/ci.yml/badge.svg)](https://github.com/ezzddinne/opencode-memory/actions/workflows/ci.yml)
+[![GitHub release](https://img.shields.io/github/v/release/ezzddinne/opencode-memory)](https://github.com/ezzddinne/opencode-memory/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/ezzddinne/opencode-memory?style=social)](https://github.com/ezzddinne/opencode-memory)
+
 > Persistent memory system for OpenCode AI coding agents — long-term context retention across sessions.
 
 ## Overview
@@ -24,26 +29,48 @@ Memories are stored as plain markdown files in `.opencode/memory/` (human-readab
 
 ### Prerequisites
 
-- [OpenCode](https://opencode.ai) (Bun-based AI coding agent)
+- [OpenCode](https://opencode.ai) >= 1.0.0
+
+### Quick install (recommended)
+
+```bash
+opencode plugin add @opencode-ai/memory
+```
+
+Or via npm:
+
+```bash
+npm install @opencode-ai/memory
+```
+
+### Manual install
+
+Add to your `opencode.json` (`~/.config/opencode/opencode.jsonc` or `.opencode/opencode.jsonc`):
+
+```jsonc
+{
+  "plugin": ["@opencode-ai/memory"]
+}
+```
+
+### Install from GitHub
+
+```bash
+opencode plugin add https://github.com/ezzddinne/opencode-memory
+```
 
 ### Install from local path (development)
 
 ```bash
-git clone <your-repo>/opencode-memory.git
+git clone https://github.com/ezzddinne/opencode-memory.git
 ```
 
-Then add to your OpenCode config (`~/.config/opencode/opencode.jsonc` or `.opencode/opencode.jsonc`):
+Then in your config:
 
 ```jsonc
 {
   "plugin": ["file:///absolute/path/to/opencode-memory"]
 }
-```
-
-### Install from npm (future)
-
-```bash
-opencode plugin @opencode-ai/memory
 ```
 
 ## Configuration
