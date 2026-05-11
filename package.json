@@ -1,0 +1,47 @@
+{
+  "name": "@opencode-ai/memory",
+  "version": "0.1.0",
+  "description": "Persistent memory system for OpenCode AI coding agents — long-term context retention across sessions",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    "./server": "./src/index.ts",
+    ".": "./src/index.ts"
+  },
+  "main": "./src/index.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "zod": "^3.23.0"
+  },
+  "peerDependencies": {
+    "@opencode-ai/plugin": ">=1.0.0",
+    "@opencode-ai/sdk": ">=1.0.0",
+    "effect": ">=3.0.0"
+  },
+  "devDependencies": {
+    "@opencode-ai/plugin": "^1.14.0",
+    "@opencode-ai/sdk": "^1.0.0",
+    "@types/node": "^22.0.0",
+    "effect": "^3.0.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "opencode": ">=1.0.0"
+  },
+  "keywords": [
+    "opencode",
+    "plugin",
+    "memory",
+    "persistent",
+    "ai",
+    "coding-agent"
+  ]
+}
